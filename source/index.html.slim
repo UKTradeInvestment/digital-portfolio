@@ -3,3 +3,7 @@ title: Welcome to Middleman
 ---
 
 h1 Digital Portfolio
+
+ul
+  - for key, project in data.projects
+    li= link_to project.name, "/projects/#{key}.html"
