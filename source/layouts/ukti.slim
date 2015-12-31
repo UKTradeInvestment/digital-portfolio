@@ -1,0 +1,20 @@
+- content_for :proposition
+  = link_to 'UK Trade & Investment', '/', class: 'proposition-name'
+        
+- content_for :global_subheader
+  .subheader-item.phase-banner
+    .phase-tag.phase-tag-alpha ALPHA
+    .phase-banner-message This is a new service – your #{link_to 'feedback', '#'} will help us to improve it.
+  .subheader-item.breadcrumbs
+    nav
+      ol
+        li= link_to('Home', '/')
+
+- content_for :author
+  li Built by <a href="https://digitaltrade.blog.gov.uk/"><abbr title="UK Trade & Investment">UKTI</abbr> Digital</a>
+
+= wrap_layout :base
+  = yield
+  
+  javascript:
+    window.BASE_PATH = "#{url_for('/index.html')}";
