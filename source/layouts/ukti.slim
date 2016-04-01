@@ -1,6 +1,14 @@
 - content_for :proposition
   = link_to 'UK Trade & Investment', '/', class: 'proposition-name'
 
+- content_for :global_subheader
+  .subheader-item.breadcrumbs
+    nav
+      ol
+        li= link_to('Home', '/')
+        li= link_to('Digital portfolio', '/')
+        = yield_content :breadcrumb
+
 - content_for :author
   li Built by <a href="https://digitaltrade.blog.gov.uk/"><abbr title="UK Trade & Investment">UKTI</abbr> Digital</a>
 

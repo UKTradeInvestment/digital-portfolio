@@ -1,16 +1,24 @@
 name: Exporting service
-description:
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor risus.
 theme: Exporting
 phase: Discovery
-senior_responsible_officer:
-service_manager:
-product_manager:
+people:
   -
-    name: Rebecca Kemp
-    email: 
-github_repository:
+    position: Service manager
+    name: A. Name
+  -
+    position: Product manager
+    name: B. Smith
+  -
+    position: Senior responsible officer
+    name: S. Wood
+repository: https://github.com/UKTradeInvestment/export-concept
+url: https://export-concept.herokuapp.com
 history:
   discovery:
+    - Completed Dec 2015
+    - Finished Dec 2015
   alpha:
+    - Started Jan 2016
   beta:
   live:

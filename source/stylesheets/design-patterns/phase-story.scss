@@ -1,0 +1,55 @@
+.phase-story {
+  border-left: 1px solid;
+
+  &.discovery {
+    border-color: $discovery-colour;
+  }
+
+  &.alpha {
+    border-color: $alpha-colour;
+  }
+
+  &.beta {
+    border-color: $beta-colour;
+  }
+
+  &.live {
+    border-color: $live-colour;
+  }
+}
+
+.phase-story--title {
+  font-size: em(19);
+  margin: 0;
+
+  .phase-tag {
+    font-size: 1em;
+    top: 0;
+  }
+}
+
+.phase-story--stories {
+  margin: 0;
+  padding: .5em .5em .25em;
+
+  li {
+    list-style: none;
+    margin-bottom: .5em;
+
+    .discovery & {
+      color: $discovery-colour;
+    }
+
+    .alpha & {
+      color: $alpha-colour;
+    }
+
+    .beta & {
+      color: $beta-colour;
+    }
+
+    .live & {
+      color: $live-colour;
+    }
+  }
+}

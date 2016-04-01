@@ -2,5 +2,39 @@
 title: Project
 ---
 
-h1= project.name
-p= project.description
+- content_for :breadcrumb
+  li= project.name
+
+.grid-row.product-intro
+  .column-two-thirds
+    h1= project.name
+    - if project.description
+      p.lede= project.description
+  .column-third
+    - if project.theme
+      p= project.theme
+    -if project.people
+      - for person in project.people
+        .person
+          span.person-position
+            ' #{person.position}
+          = person.name
+.grid-row
+  .column-two-thirds
+  .column-third
+    .unit.phase-stories
+      h2.u-vh Service status
+      - for key, history in project.history
+        - if history
+          div class="phase-story #{key}"
+            h3.phase-story--title
+              span(class="phase-tag phase-tag-#{key}")= key.capitalize
+            ol.phase-story--stories
+              - history.each do |story|
+                li= story
+    .unit.related-links
+      h2.u-vh Related links
+      - if project.url
+        div= link_to project.url, project.url
+      - if project.repository
+        div= link_to project.repository, project.repository

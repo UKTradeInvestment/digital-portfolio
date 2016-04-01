@@ -12,11 +12,16 @@ ul.phases
       .phase-count= get_project_count_by_phase(phase.title)
 
 table.product-list
-  - for key, project in data.projects
+  thead.u-vh
     tr
-      td.description
-        h3
-          = link_to project.name, "/projects/#{key}.html"
-          span(class="phase-tag phase-tag-#{project.phase.downcase}")=project.phase
-        p=project.description
-      td=
+      td Description
+      td
+  tbody
+    - for key, project in data.projects
+      tr
+        td.description
+          h3
+            = link_to project.name, "/projects/#{key}.html"
+            span(class="phase-tag phase-tag-#{project.phase.downcase}")=project.phase
+          p=project.description
+        td=

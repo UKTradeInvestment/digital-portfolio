@@ -1,16 +1,9 @@
 name: Exporting is Great
-description:
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor risus. Sed vestibulum, orci dapibus lobortis pellentesque, metus risus vestibulum odio, sit amet maximus nunc ipsum sed augue. Duis non sapien vel nibh dapibus molestie non porta sem. In non dui feugiat, consectetur odio faucibus, ultricies lacus.
 theme: Exporting
 phase: Beta
-senior_responsible_officer:
-service_manager:
-product_manager:
-  -
-    name: Jason Caplin
-    email: 
-  -
-    name: Gerald
-github_repository:
+people:
+repository:
 history:
   discovery:
   alpha:
