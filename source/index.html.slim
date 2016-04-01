@@ -2,8 +2,21 @@
 title: Welcome to Middleman
 ---
 
-h1 Digital Portfolio
+header.list-header
+  h1 Digital Portfolio
 
-ul
+ul.phases
+  - for phase in data.phases
+    li.phase class=phase.className
+      h3.phase-title= phase.title
+      .phase-count= get_project_count_by_phase(phase.title)
+
+table.product-list
   - for key, project in data.projects
-    li= link_to project.name, "/projects/#{key}.html"
+    tr
+      td.description
+        h3
+          = link_to project.name, "/projects/#{key}.html"
+          span(class="phase-tag phase-tag-#{project.phase.downcase}")=project.phase
+        p=project.description
+      td=

@@ -1,0 +1,16 @@
+// Phase tag patches
+.phase-tag {
+  position: relative;
+  line-height: 1.25;
+  top: -2px;
+  padding-left: 8;
+  padding-right: 8;
+}
+
+.phase-tag-backlog {
+  background-color: $purple;
+}
+
+.phase-tag-discovery {
+  background-color: $discovery-colour;
+}

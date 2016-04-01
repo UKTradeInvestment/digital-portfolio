@@ -1,0 +1,82 @@
+.phases {
+  @include clearfix;
+  margin: 0;
+  padding: 0;
+}
+
+.phase {
+  list-style: none;
+  padding: 0 0 1em;
+
+  @include media('>tablet') {
+    @include clearfix;
+    float: left;
+    width: 19.04%;
+    padding: 0;
+    margin: 0 .6%;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.phase-title {
+  font-size: em(24);
+  text-align: center;
+  padding: em(5) 0 em(2);
+  margin: 0;
+  color: $white;
+
+  .backlog & {
+    background-color: $purple;
+  }
+
+  .discovery & {
+    background-color: $discovery-colour;
+  }
+
+  .alpha & {
+    background-color: $alpha-colour;
+  }
+
+  .beta & {
+    background-color: $beta-colour;
+  }
+
+  .live & {
+    background-color: $live-colour;
+  }
+}
+
+.phase-count {
+  font-size: em(80);
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  margin: .2em 0;
+
+  .backlog & {
+    color: $purple;
+  }
+
+  .discovery & {
+    color: $discovery-colour;
+  }
+
+  .alpha & {
+    color: $alpha-colour;
+  }
+
+  .beta & {
+    color: $beta-colour;
+  }
+
+  .live & {
+    color: $live-colour;
+  }
+}

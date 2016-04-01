@@ -43,11 +43,15 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def get_projects_by_phase(phase)
+    data.projects.select { |k,p| p.phase == phase }
+  end
+
+  def get_project_count_by_phase(phase)
+    get_projects_by_phase(phase).count
+  end
+end
 
 # Load Sass paths and copy images & layouts
 require 'find'
