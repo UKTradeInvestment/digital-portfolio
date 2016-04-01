@@ -20,3 +20,7 @@
 # Ignore webpack builds
 *.bundle.js
 *.bundle.js.map
+
+# Ignore mojular layouts
+source/layouts/base.erb
+source/layouts/internal.erb

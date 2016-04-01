@@ -1,22 +1,23 @@
 {
   "name": "ukti-digital-portfolio",
   "version": "1.1.0",
-  "description": "== README",
+  "description": "UKTI Digital Portfolio",
   "main": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UKTradeInvestment/digital-portfolio"
+  },
   "directories": {
     "test": "test"
   },
   "dependencies": {
-    "webpack": "^1.12.2",
-    "mojular": "mojular/mojular",
-    "mojular-govuk-elements": "mojular/govuk-elements",
     "mojular-moj-elements": "mojular/moj-elements",
-    "mojular-templates": "mojular/templates"
+    "webpack": "^1.12.2"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Dom Smith <dom@teneightfive.com>",
   "license": "MIT"
 }

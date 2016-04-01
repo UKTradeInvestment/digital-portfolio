@@ -1,4 +1,4 @@
-require 'pry'
+require 'sass_paths'
 
 ###
 # Page options, layouts, aliases and proxies
@@ -25,9 +25,13 @@ end
 # ignore proxy templates
 ignore "/project.html"
 
-set :layout, 'ukti'
-
 # General configuration
+
+Slim::Engine.disable_option_validator!
+Slim::Engine.set_options pretty: true
+Slim::Engine.set_options attr_list_delims: { '(' => ')', '[' => ']' }
+
+set :layout, 'ukti'
 
 # Reload the browser automatically whenever files change
 configure :development do
@@ -51,7 +55,7 @@ require 'find'
 Find.find('node_modules').grep(/mojular[a-z-]+\/package\.json/).map do |package|
   sassPaths = JSON.parse(IO.read(package))['sassPaths']
   dirname = File.dirname(package)
-  sassPaths.map { |path| Sass.load_paths << File.expand_path(path, File.directory?(path) ? '' : dirname) } if sassPaths
+  sassPaths.map { |path| SassPaths.append(File.expand_path(path, File.directory?(path) ? '' : dirname)) } if sassPaths
   FileUtils.cp_r Find.find(dirname).grep(/images\//), "#{config.source}/#{config.images_dir}"
   FileUtils.cp_r Find.find(dirname).grep(/layouts\/erb\//), "#{config.source}/#{config.layouts_dir}"
 end
