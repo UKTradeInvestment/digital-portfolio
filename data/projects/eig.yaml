@@ -1,11 +1,14 @@
 name: Exporting is Great
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor risus. Sed vestibulum, orci dapibus lobortis pellentesque, metus risus vestibulum odio, sit amet maximus nunc ipsum sed augue. Duis non sapien vel nibh dapibus molestie non porta sem. In non dui feugiat, consectetur odio faucibus, ultricies lacus.
+description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor risus.
 theme: Exporting
 phase: Beta
 people:
-repository:
-history:
-  discovery:
-  alpha:
-  beta:
-  live:
+  -
+    position: Service manager
+    name: A. Name
+  -
+    position: Product manager
+    name: B. Smith
+  -
+    position: Senior responsible officer
+    name: S. Wood

@@ -7,34 +7,46 @@ title: Project
 
 .grid-row.product-intro
   .column-two-thirds
-    h1= project.name
+    h1
+      = project.name
+      span(class="phase-tag phase-tag-#{project.phase.downcase}")=project.phase
     - if project.description
       p.lede= project.description
   .column-third
     - if project.theme
       p= project.theme
-    -if project.people
+    - if project.people
       - for person in project.people
         .person
           span.person-position
             ' #{person.position}
           = person.name
 .grid-row
-  .column-two-thirds
+  .column-two-thirds.product-body
+    h2.heading-medium Successes
+    p= lorem.paragraph
+    p= lorem.paragraph
+    h2.heading-medium Challenges
+    p= lorem.paragraph
+    p= lorem.paragraph
   .column-third
-    .unit.phase-stories
-      h2.u-vh Service status
-      - for key, history in project.history
-        - if history
-          div class="phase-story #{key}"
-            h3.phase-story--title
-              span(class="phase-tag phase-tag-#{key}")= key.capitalize
-            ol.phase-story--stories
-              - history.each do |story|
-                li= story
-    .unit.related-links
-      h2.u-vh Related links
-      - if project.url
-        div= link_to project.url, project.url
-      - if project.repository
-        div= link_to project.repository, project.repository
+    - if project.history
+      .unit.phase-stories
+        h2.u-vh Service status
+        - for key, history in project.history
+          - if history
+            div class="phase-story #{key}"
+              h3.phase-story--title
+                span(class="phase-tag phase-tag-#{key}")= key.capitalize
+              ol.phase-story--stories
+                - history.each do |story|
+                  li class=("complete" if story.complete) #{story.label} &mdash; #{story.date}
+    - if project.url or project.repository
+      .unit.service-links
+        h2.u-vh Related links
+        - if project.url
+          h3 Service link
+          = link_to project.url, project.url
+        - if project.repository
+          h3 Source code
+          = link_to project.repository, project.repository

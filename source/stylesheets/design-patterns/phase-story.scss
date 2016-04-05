@@ -36,20 +36,22 @@
     list-style: none;
     margin-bottom: .5em;
 
-    .discovery & {
-      color: $discovery-colour;
-    }
+    &.complete {
+      .discovery & {
+        color: $discovery-colour;
+      }
 
-    .alpha & {
-      color: $alpha-colour;
-    }
+      .alpha & {
+        color: $alpha-colour;
+      }
 
-    .beta & {
-      color: $beta-colour;
-    }
+      .beta & {
+        color: $beta-colour;
+      }
 
-    .live & {
-      color: $live-colour;
+      .live & {
+        color: $live-colour;
+      }
     }
   }
 }

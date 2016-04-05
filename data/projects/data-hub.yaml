@@ -1,7 +1,7 @@
-name: Exporting service
+name: Data hub
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut dolor risus.
-theme: Exporting
-phase: Discovery
+theme: Internal
+phase: Alpha
 people:
   -
     position: Service manager
@@ -12,8 +12,6 @@ people:
   -
     position: Senior responsible officer
     name: S. Wood
-repository: https://github.com/UKTradeInvestment/export-concept
-url: https://export-concept.herokuapp.com
 history:
   discovery:
     -
@@ -25,5 +23,8 @@ history:
       date: Jan 2016
       complete: true
   alpha:
+    -
+      label: Started
+      date: Feb 2016
   beta:
   live:
