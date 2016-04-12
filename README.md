@@ -2,9 +2,9 @@
 
 This application contains a collection of current work going on within the UKTI Digital team.
 
-## Contributing
+## Managing products/services
 
-Projects are maintained in the [`./data/projects`](./data/projects) directory.
+Products/services are maintained in the [`./data/projects`](./data/projects) directory.
 
 This application will create a portfolio page and an item on the homepage for each file
 in this directory.
@@ -23,7 +23,7 @@ submitted via a [Pull Request](https://help.github.com/articles/using-pull-reque
 Each project is made up of a set of key/value pairs.
 This data can be in either [JSON](http://www.json.org/) or [YAML](http://yaml.org/) format.
 
-For a blank example in each format look in the `./examples/` directory.
+For a blank example in each format look in the [`./examples/`](./examples) directory.
 
 The current available options for each project are shown in the table below.
 
