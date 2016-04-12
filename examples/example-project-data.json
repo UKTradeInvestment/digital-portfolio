@@ -1,0 +1,46 @@
+{
+  "name": "",
+  "description": "",
+  "theme": "",
+  "phase": "",
+  "people": [
+    {
+      "position": "",
+      "name": ""
+    },
+    {
+      "position": "",
+      "name": ""
+    }
+  ],
+  "repository": "",
+  "url": "",
+  "history": {
+    "discovery": [
+      {
+        "label": "",
+        "date": "",
+        "complete": ""
+      },
+      {
+        "label": "",
+        "date": "",
+        "complete": ""
+      }
+    ],
+    "alpha": [
+      {
+        "label": "",
+        "date": "",
+        "complete": ""
+      },
+      {
+        "label": "",
+        "date": "",
+        "complete": ""
+      }
+    ],
+    "beta": "",
+    "live": ""
+  }
+}
