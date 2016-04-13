@@ -5,48 +5,51 @@ title: Project
 - content_for :breadcrumb
   li= project.name
 
-.grid-row.product-intro
-  .column-two-thirds
-    h1
-      = project.name
-      span(class="phase-tag phase-tag-#{project.phase.downcase}")=project.phase
-    - if project.description
-      p.lede= project.description
-  .column-third
-    - if project.theme
-      p= project.theme
-    - if project.people
-      - for person in project.people
-        .person
-          span.person-position
-            ' #{person.position}
-          = person.name
-.grid-row
-  .column-two-thirds.product-body
-    h2.heading-medium Successes
-    p= lorem.paragraph
-    p= lorem.paragraph
-    h2.heading-medium Challenges
-    p= lorem.paragraph
-    p= lorem.paragraph
-  .column-third
-    - if project.history
-      .unit.phase-stories
-        h2.u-vh Service status
-        - for key, history in project.history
-          - if history
-            div class="phase-story #{key}"
-              h3.phase-story--title
-                span(class="phase-tag phase-tag-#{key}")= key.capitalize
-              ol.phase-story--stories
-                - history.each do |story|
-                  li class=("complete" if story.complete) #{story.label} &mdash; #{story.date}
-    - if project.url or project.repository
-      .unit.service-links
-        h2.u-vh Related links
-        - if project.url
-          h3 Service link
-          = link_to project.url, project.url
-        - if project.repository
-          h3 Source code
-          = link_to project.repository, project.repository
+div class=("has-areas" if regions)
+  .grid-row.product-intro
+    .column-two-thirds
+      - if project.name
+        h1 data-area="name"
+          = project.name
+          span(class="phase-tag phase-tag-#{project.phase.downcase}" data-area="phase")=project.phase
+      - if project.description
+        p.lede data-area="description"= project.description
+    .column-third
+      - if project.theme
+        p data-area="theme"= project.theme
+      - if project.people
+        div data-area="people"
+          - for person in project.people
+            .person data-area="people.person"
+              span.person-position
+                ' #{person.position}
+              = person.name
+  .grid-row
+    .column-two-thirds.product-body
+      h2.heading-medium Successes
+      p= lorem.paragraph
+      p= lorem.paragraph
+      h2.heading-medium Challenges
+      p= lorem.paragraph
+      p= lorem.paragraph
+    .column-third
+      - if project.history
+        .unit.phase-stories
+          h2.u-vh Service status
+          - for key, history in project.history
+            - if history
+              div class="phase-story #{key}" data-area="history"
+                h3.phase-story--title
+                  span(class="phase-tag phase-tag-#{key}")= key.capitalize
+                ol.phase-story--stories
+                  - history.each do |story|
+                    li data-area="history.item" class=("complete" if story.complete) #{story.label} &mdash; #{story.date}
+      - if project.url or project.repository
+        .unit.service-links
+          h2.u-vh Related links
+          - if project.url
+            h3 Service link
+            div data-area="url"= link_to project.url, project.url
+          - if project.repository
+            h3 Source code
+            div data-area="repository"= link_to project.repository, project.repository

@@ -1,0 +1,20 @@
+.has-areas {
+  [data-area] {
+    border: 1px dashed $turquoise;
+    position: relative;
+
+    &::before {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1em;
+      background-color: $turquoise;
+      color: $white;
+      content: attr(data-area);
+      padding: 3px 6px 1px;
+      position: absolute;
+      bottom: 100%;
+      left: -1px;
+      text-transform: lowercase;
+    }
+  }
+}

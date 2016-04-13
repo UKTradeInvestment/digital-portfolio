@@ -22,6 +22,11 @@ data.projects.each do |key, project|
   proxy "/projects/#{key}.html", "/project.html", :locals => { :project => project }, :ignore => true
 end
 
+# Create an example page for visualising where data is used
+data.examples.each do |key, project|
+  proxy "/example-project.html", "/project.html", :locals => { :project => project, :regions => true }, :ignore => true
+end
+
 # ignore proxy templates
 ignore "/project.html"
 

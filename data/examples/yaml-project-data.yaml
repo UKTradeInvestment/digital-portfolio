@@ -1,0 +1,30 @@
+name: Sample project
+description: Sample project description
+theme: Export services
+phase: Alpha
+people:
+  -
+    position: Service manager
+    name: A. Name
+  -
+    position: Product manager
+    name: A. Other
+repository: https://github.com/UKTradeInvestment/digital-portfolio
+url: https://https://ukti-digital-portfolio.herokuapp.com
+history:
+  discovery:
+    -
+      label: Started
+      date: Nov 2015
+      complete: true
+    -
+      label: Completed
+      date: Dec 2015
+      complete: true
+  alpha:
+    -
+      label: Started
+      date: Jan 2016
+      complete: false
+  beta:
+  live:
