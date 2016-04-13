@@ -23,7 +23,10 @@ submitted via a [Pull Request](https://help.github.com/articles/using-pull-reque
 Each project is made up of a set of key/value pairs.
 This data can be in either [JSON](http://www.json.org/) or [YAML](http://yaml.org/) format.
 
-For a blank example in each format look in the [`./examples/`](./examples) directory.
+For a blank example in each format look in the [`examples directory`](./data/examples/).
+
+To visualise where this data is present on the product/service page go to
+[https://ukti-digital-portfolio.herokuapp.com/example-project.html](https://ukti-digital-portfolio.herokuapp.com/example-project.html).
 
 The current available options for each project are shown in the table below.
 
