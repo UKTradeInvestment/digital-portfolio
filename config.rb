@@ -19,7 +19,7 @@ page '/*.txt', layout: false
 #  which_fake_page: "Rendering a fake page with a local variable" }
 
 data.projects.each do |key, project|
-  proxy "/projects/#{key}.html", "/project.html", :locals => { :project => project }, :ignore => true
+  proxy "/projects/#{key}.html", "/project.html", :locals => { :project => project, :regions => false }, :ignore => true
 end
 
 # Create an example page for visualising where data is used
